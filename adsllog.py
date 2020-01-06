@@ -96,7 +96,8 @@ def main():
             # if internet is reachable perform the speedtest
             j_d = st_json()
             # prepare values for logging
-            down_speed = j_d["download"]["bandwidth"] / SPEEDTEST_CONVERT_FACTOR
+            down_speed = j_d["download"]["bandwidth"] / \
+                SPEEDTEST_CONVERT_FACTOR
             up_speed = j_d["upload"]["bandwidth"] / SPEEDTEST_CONVERT_FACTOR
             packet_loss = j_d["packetLoss"]
             test_server = j_d["server"]["host"]
