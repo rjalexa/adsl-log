@@ -100,7 +100,7 @@ def main():
             up_speed = j_d["upload"]["bandwidth"] / SPEEDTEST_CONVERT_FACTOR
             packet_loss = j_d["packetLoss"]
             test_server = j_d["server"]["host"]
-            speedtest_values_string = f"DL:{down_speed:3.1f};UL:{up_speed:2.1f};PL:{packet_loss};host:{test_server}"
+            speedtest_values_string = f"{down_speed:3.1f};{up_speed:2.1f};{packet_loss};host:{test_server}"
             # check if there are anomalies
             if down_speed < TD or up_speed < TU or packet_loss > TL:
                 logger.warning(f"{speedtest_values_string}")
