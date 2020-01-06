@@ -108,7 +108,7 @@ def main():
                 logger.info(f"{speedtest_values_string}")
         else:
             # Internet host cannot be resolved/reached
-            speedtest_values_string = "DL:0;UL:0;PL:-1"
+            speedtest_values_string = "0;0;-1"
             logger.error(f"{speedtest_values_string}")
         # depending on found ADSL quality loop after waiting some time
         time.sleep(60 * 60 * DEFAULT_TEST_FREQUENCY)
