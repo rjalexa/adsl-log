@@ -5,7 +5,9 @@ This program will use Ookla's speedtest command line interface (which can be fou
 and use it hourly to log your ADSL performance to a log file.
 
 It will write an INFO message when line speeds and packet loss are in the normal range.
+
 It will write a WARNING message when the upload, download or packet loss are below a given threshold.
+
 It will write an ERROR message when the Internet connection does not work properly at all.
 
 The normal upload, download and packet loss values can be customized at the beginning of the code. Another customization you might want to do is changing the default test frequency (currently 1 hour) to suit your needs (0.0167 would yield roughly one test per minute).
