@@ -1,0 +1,6 @@
+10) Have a copy of Ookla's SpeedTest CLI installed in /usr/local/bin
+    https://www.speedtest.net/apps/cli
+    Note: run it from the command line the first time to confirm
+    related terms and conditions.
+50) if you want to run this as a background process:
+    nohup python adsllog.py &
