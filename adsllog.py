@@ -30,7 +30,7 @@ REMOTE_SERVER = "www.google.com"
 #  setup logging
 log_file_handler = logging.FileHandler(LOG_NAME)
 log_formatter = logging.Formatter(
-    "%(asctime)s;%(levelname)s;%(message)s", "%Y-%m-%d-%H%M%S"
+    "%(asctime)s;%(levelname)s;%(message)s", "%Y-%m-%d %H:%M:%S"
 )
 log_file_handler.setFormatter(log_formatter)
 
