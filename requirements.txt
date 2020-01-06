@@ -2,5 +2,7 @@
     https://www.speedtest.net/apps/cli
     Note: run it from the command line the first time to confirm
     related terms and conditions.
+25) Quite obviously this will run only if the host machine is active and with
+    an active Internet connection
 50) if you want to run this as a background process:
-    nohup python adsllog.py &
+    nohup python -u adsllog.py &

@@ -23,7 +23,7 @@ SPEEDTEST_CLI = "/usr/local/bin/speedtest"  # full path of Speedtest CLI
 LOG_NAME = 'adsllog.log'
 # usually you do not need to change any the following
 TL = 0  # Threshold for packet loss alert (if exceeded)
-DEFAULT_TEST_FREQUENCY = 1  # How many hours between normal line tests
+DEFAULT_TEST_FREQUENCY = 0.01  # How many hours between normal line tests
 SPEEDTEST_CONVERT_FACTOR = 125000  # convert speed from Ookla to MBits
 REMOTE_SERVER = "www.google.com"
 #  setup logging

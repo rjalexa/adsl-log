@@ -16,7 +16,7 @@ Only prerequisites are having an installed copy of Ookla's Speedtest CLI and a w
 
 Tested on MacOS and should work just the same for Linux and other Unices with Python 3.x
 
-To use it on Windows currently you must change the ping parameter from -c to -n within the is_internet_up function.
+Windows has not been tested but given you fix the Speedtest CLI path it should work too.
 
 To launch it as a background process in Linux/MacOS you could use the following incantation:
-nohup python adsllog.py & and would find it running with ps -ef | grep adsllog.py
+nohup python -u adsllog.py & and would find it running with ps -ef | grep adsllog.py
