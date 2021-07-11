@@ -18,8 +18,8 @@ import socket
 import logging
 
 # Customize the following for your own values
-TD = 210  # Threshold for download speed alert (if below)
-TU = 28  # Threshold for upload speed alert (if below)
+TD = 450  # Threshold for download speed alert (if below)
+TU = 90  # Threshold for upload speed alert (if below)
 SPEEDTEST_CLI = "/usr/local/bin/speedtest"  # full path of Speedtest CLI
 LOG_NAME = "adsllog.log"
 # usually you do not need to change any the following
@@ -96,12 +96,13 @@ def main():
             # if internet is reachable perform the speedtest
             j_d = st_json()
             # prepare values for logging
-            down_speed = j_d["download"]["bandwidth"] / \
-                SPEEDTEST_CONVERT_FACTOR
+            down_speed = j_d["download"]["bandwidth"] / SPEEDTEST_CONVERT_FACTOR
             up_speed = j_d["upload"]["bandwidth"] / SPEEDTEST_CONVERT_FACTOR
             packet_loss = j_d["packetLoss"]
             test_server = j_d["server"]["host"]
-            speedtest_values_string = f"{down_speed:3.1f};{up_speed:2.1f};{packet_loss};host:{test_server}"
+            speedtest_values_string = (
+                f"{down_speed:3.1f};{up_speed:2.1f};{packet_loss};host:{test_server}"
+            )
             # check if there are anomalies
             if down_speed < TD or up_speed < TU or packet_loss > TL:
                 logger.warning(f"{speedtest_values_string}")
