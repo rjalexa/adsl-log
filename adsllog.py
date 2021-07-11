@@ -21,7 +21,7 @@ import logging
 TD = 450  # Threshold for download speed alert (if below)
 TU = 90  # Threshold for upload speed alert (if below)
 SPEEDTEST_CLI = "/usr/local/bin/speedtest"  # full path of Speedtest CLI
-LOG_NAME = "adsllog.log"
+LOG_NAME = "adsl_log.log"
 # usually you do not need to change any the following
 TL = 0  # Threshold for packet loss alert (if exceeded)
 DEFAULT_TEST_FREQUENCY = 1  # How many hours between normal line tests
